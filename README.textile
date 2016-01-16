@@ -1,0 +1,13 @@
+Este script parsea webs de perfiles de los diputados en
+"congreso.es":http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=1&idLegislatura=10 y por cada ficha de diputado en el Congreso guarda:
+* Nombre completo
+* Legislatura
+* URL foto
+* Sexo
+* Fecha nacimiento
+* Lugar nacimiento
+* ...
+
+(en construcción)
+
+Las urls de las webs de los perfiles las coge de "este otro scraper":https://scraperwiki.com/scrapers/congreso_listado_de_diputados/ .
