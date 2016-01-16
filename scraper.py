@@ -71,7 +71,7 @@ class CongressData(object):
             ident = s['id']
             print ident, url
             xmlroot = self.get_content(url)
-            self.parse_and_save(xmlroot, ident)
+            self.parse_and_save(url, xmlroot, ident)
         print 'FIN'
 
     def get_content(self, url):
@@ -84,8 +84,9 @@ class CongressData(object):
     def convert_to_unicode(self, string): 
         return unicode(string.encode('latin-1'), "utf-8")
 
-    def parse_and_save(self, root, ident):
+    def parse_and_save(self, url, root, ident):
         datos = {}
+        datos['url'] = url
         datos['id'] = ident
         # --- div datos_diputado ---
         ext = root.xpath('//div[@id="datos_diputado"]/p[@class="logo_grupo"][1]/img/@src')
