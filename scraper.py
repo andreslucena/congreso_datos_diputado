@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import urllib2
 from lxml.html import fromstring
 from lxml.html.clean import clean_html
@@ -45,8 +48,8 @@ def parse_and_save(root, id):
     datos['apellidos'] = root.xpath('substring-before(//div[@id="curriculum"]/div[@class="nombre_dip"]/text(),",")').strip().encode('latin-1')
     datos['nombre'] = root.xpath('substring-after(//div[@id="curriculum"]/div[@class="nombre_dip"]/text(),",")').strip().encode('latin-1')
 
-    # Ciprià: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=329&idLegislatura=10
-    # Aixalà: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=190&idLegislatura=10
+    # Ciprià: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=329&idLegislatura=11
+    # Aixalà: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=190&idLegislatura=11
     if 'Cipri' in datos['nombre']:
         datos['nombre'] = 'Cipria'
     if 'Solsona Aixal' in datos['apellidos']:
@@ -122,10 +125,10 @@ def parse_and_save(root, id):
             assert(False)
 
     """
-    Twitter solo: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=191&idLegislatura=10
-    Blog: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=246&idLegislatura=10
-    Vimeo: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=282&idLegislatura=10
-    Flickr: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=104&idLegislatura=10
+    Twitter solo: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=191&idLegislatura=11
+    Blog: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=246&idLegislatura=11
+    Vimeo: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=282&idLegislatura=11
+    Flickr: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=104&idLegislatura=11
     """
 
     datos['comisiones'] = "; ".join(root.xpath('//div[@id="curriculum"]/div[@class="listado_1"]/ul/li/a/text()')).encode('latin-1')
