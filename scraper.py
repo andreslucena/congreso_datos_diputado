@@ -9,8 +9,7 @@ from lxml.html.clean import clean_html
 class CongressList(object):
 
     def __init__(self):
-        self.start_url = 'http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=\
-        /wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11'
+        self.start_url = 'http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11'
         self.headers = {'User-Agent' : 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.3) Gecko/20091020 Ubuntu/9.10 (karmic) Firefox/3.6.0'}
         self.result = []
 
@@ -61,8 +60,7 @@ class CongressList(object):
 class CongressData(object):
 
     def __init__(self):
-        self.start_url = 'http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049\
-                .next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11'
+        self.start_url = 'http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11'
         self.headers = {'User-Agent' : 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.3) Gecko/20091020 Ubuntu/9.10 (karmic) Firefox/3.6.0'}
 
     def start(self):
@@ -90,7 +88,11 @@ class CongressData(object):
         datos = {}
         datos['id'] = ident
         # --- div datos_diputado ---
-        url_foto = root.xpath('//div[@id="datos_diputado"]/p[@class="logo_grupo"][1]/img/@src')[0]
+        ext = root.xpath('//div[@id="datos_diputado"]/p[@class="logo_grupo"][1]/img/@src')
+        if len(ext) == 1: 
+            url_foto = ext[0]
+        else: 
+            url_foto = "/missing.png"
         partido =  root.xpath('//div[@id="datos_diputado"]/p[@class="nombre_grupo"]/text()')[0]
         datos['url_foto'] = 'http://www.congreso.es' + url_foto
         datos['partido'] = partido
