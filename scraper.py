@@ -202,7 +202,7 @@ class CongressData(object):
         Flickr: http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado?idDiputado=104&idLegislatura=11
         """
         datos['comisiones'] = "; ".join(root.xpath('//div[@id="curriculum"]/div[@class="listado_1"]/ul/li/a/text()'))
-        print datos['apellidos'], datos['nombre']
+        #print datos['apellidos'], datos['nombre']
         scraperwiki.sqlite.save(['id'], datos)
 
 
