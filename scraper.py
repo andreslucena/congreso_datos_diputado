@@ -40,7 +40,7 @@ class CongressList(object):
         #assert(len(names)==25)
         for url, nombre in zip(urls, names):
             url = 'http://www.congreso.es' + url
-            nombre = unicode(nombre.encode('latin-1'), "utf-8")
+            nombre = nombre.encode('latin-1')
             ident = url.split('idDiputado=')[1].split('&')[0]
             resp = {'id':int(ident), 'nombre': nombre, 'url':url}
             self.result.append(resp)
