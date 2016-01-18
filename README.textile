@@ -1,5 +1,4 @@
-Este script parsea una de las webs de 
-"congreso.es":http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11 y por cada diputado en el Congreso guarda:
+Este script parsea una de las webs de "congreso.es":http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11 y por cada diputado en el Congreso guarda:
 
 * su id unico en la web del Congreso
 * su nombre y apellidos
