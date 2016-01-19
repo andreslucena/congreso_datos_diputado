@@ -39,3 +39,6 @@ h1. Producción
 
 Ver en "morph.io":https://morph.io/andreslucena/congreso_listado_de_diputados
 
+h1. TODO 
+
+* Arreglar bug en columna de estado_civil (sale parte del Curriculum)
