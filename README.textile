@@ -6,14 +6,14 @@ Este script parsea una de las webs de "congreso.es":http://www.congreso.es/porta
 * la URL de la foto de su perfil en la web del Congreso 
 * la URL a la Declaración de Bienes y de Actividades
 * El cargo que tiene (Diputado o Diputada) 
-* La posicion en sector, fila y butaca
+* La posición en sector, fila y butaca
 * Su correo electrónico
 * El partido y grupo parlamentario (si tiene alguno) al que pertenece
 * Su curriculum 
 * Su fecha de nacimiento
 * Su estado civil
 * La legislatura actual y las legislaturas anteriores en las que haya estado
-* Las comiciones en las que participa
+* Las comisiones en las que participa
 * La circunscripción a la que pertenece
 * Redes sociales: 
 ** El nombre del usuario en twitter
@@ -24,9 +24,9 @@ Este script parsea una de las webs de "congreso.es":http://www.congreso.es/porta
 ** La URL a su perfil en YouTube
 ** La URL a su perfil en Instagram
 
-Basado en el trabajo de @_pablog para la Legislatura X, adaptado para la XI. Se  han unificado estos scripts y se han migrado de "ScraperWiki":https://classic.scraperwiki.com/ a "morph.io":http://morph.io/ 
-* https://classic.scraperwiki.com/scrapers/congreso_listado_de_diputados/
-* https://classic.scraperwiki.com/scrapers/congreso_datos_diputado/
+Basado en el trabajo de "Pablo Castellano":https://github.com/PabloCastellano para la Legislatura X, adaptado para la XI. Se  han unificado estos scripts y se han migrado de "ScraperWiki":https://classic.scraperwiki.com/ a "morph.io":http://morph.io/ 
+* "https://classic.scraperwiki.com/scrapers/congreso_listado_de_diputados/":https://classic.scraperwiki.com/scrapers/congreso_listado_de_diputados/
+* "https://classic.scraperwiki.com/scrapers/congreso_datos_diputado/":https://classic.scraperwiki.com/scrapers/congreso_datos_diputado/
 
 h1. Desarrollo
 
