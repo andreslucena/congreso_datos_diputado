@@ -96,7 +96,7 @@ class CongressData(object):
             url_foto = "/missing.png"
         partido =  root.xpath('//div[@id="datos_diputado"]/p[@class="nombre_grupo"]/text()')[0]
         datos['url_foto'] = 'http://www.congreso.es' + url_foto
-        datos['partido'] = convert_to_unicode(partido)
+        datos['partido'] = self.convert_to_unicode(partido)
         #gif = root.xpath('substring-after(//div[@id="datos_diputado"]/p[@class="pos_hemiciclo"]/img/@src,"_")') # '100_2310.gif'
         #e = gif.split('100_')[1].split('.')[0] #3816
         #if len(e) == 4:
