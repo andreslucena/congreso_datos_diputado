@@ -33,9 +33,6 @@ class CongressList(object):
     def parse_and_save(self, root):
         urls = root.xpath('//div[@class="listado_1"]/ul/li/a/@href')
         names = root.xpath('//div[@class="listado_1"]/ul/li/a/text()')
-        #import ipdb ; ipdb.set_trace()
-        #print urls
-        #print urls
         #assert(len(urls)==25)
         #assert(len(names)==25)
         for url, nombre in zip(urls, names):
@@ -126,9 +123,8 @@ class CongressData(object):
         #    datos['apellidos'] = 'Solsona Aixala'
         cargo = root.xpath('normalize-space(//div[@id="curriculum"]/div[@class="texto_dip"][1]/ul/li/div[@class="dip_rojo"][1]/text())')
         datos['cargo'] = cargo[:cargo.find(' ')]
-        datos['circunscripcion'] = cargo[cargo.rfind(' ')+1:][:-1]
+        datos['circunscripcion'] = self.convert_to_unicode(cargo[cargo.rfind(' ')+1:][:-1])
         if datos['cargo'] not in ('Diputado', 'Diputada'):
-            import ipdb ; ipdb.set_trace()
             print datos['cargo']
             assert(False)
         nacimiento = root.xpath('normalize-space(//div[@id="curriculum"]/div[@class="texto_dip"][2]/ul/li[1]/text())')[10:-2]
