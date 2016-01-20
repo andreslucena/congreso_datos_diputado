@@ -6,6 +6,14 @@ from urllib.request import Request, urlopen
 from lxml.html import fromstring
 from lxml.html.clean import clean_html
 
+import os
+# https://github.com/otherchirps/nsw_gov_docs/commit/f162b1dc8409dc4724a27b5c82280d5f56745a8d
+# morph.io requires this db filename, but scraperwiki doesn't nicely
+# expose a way to alter this. So we'll fiddle our environment ourselves
+# before our pipeline modules load.
+os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
+
+
 USER_AGENT = 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.3) Gecko/20091020 Ubuntu/9.10 (karmic) Firefox/3.6.0'
 
 

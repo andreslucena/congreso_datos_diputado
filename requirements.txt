@@ -1,2 +1,2 @@
--e git+http://github.com/openaustralia/scraperwiki-python.git@morph_defaults#egg=scraperwiki
+scraperwiki==0.4.1
 lxml
