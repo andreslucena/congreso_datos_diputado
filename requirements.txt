@@ -1,2 +1,3 @@
+urllib2
 scraperwiki==0.4.1
 lxml
