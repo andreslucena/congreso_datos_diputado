@@ -32,7 +32,7 @@ h1. Desarrollo
 
 Para preparar el entorno de desarrollo y testing en local, con Ubuntu 14.04, recomendamos usar virtualenv y virtualenvwrapper. Una vez instalados y dentro de un entorno virtual, ejecutamos lo siguiente:
 
-bc. sudo apt-get install libxml2-dev libxslt1-dev python-dev
+bc. sudo apt-get install libxml2-dev libxslt1-dev python3-dev
 pip install -r requirements.txt 
 
 h1. Producción
