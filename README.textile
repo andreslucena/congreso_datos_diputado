@@ -1,4 +1,4 @@
-Este script parsea una de las webs de "congreso.es":http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11 y por cada diputado en el Congreso guarda:
+Este script parsea una de las webs de "congreso.es":http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=12 y por cada diputado en el Congreso guarda:
 
 * su id unico en la web del Congreso
 * su nombre y apellidos
@@ -24,7 +24,7 @@ Este script parsea una de las webs de "congreso.es":http://www.congreso.es/porta
 ** La URL a su perfil en YouTube
 ** La URL a su perfil en Instagram
 
-Basado en el trabajo de "Pablo Castellano":https://github.com/PabloCastellano para la Legislatura X, adaptado para la XI. Se  han unificado estos scripts y se han migrado de "ScraperWiki":https://classic.scraperwiki.com/ a "morph.io":http://morph.io/ 
+Basado en el trabajo de "Pablo Castellano":https://github.com/PabloCastellano para la Legislatura X, adaptado para la XII. Se  han unificado estos scripts y se han migrado de "ScraperWiki":https://classic.scraperwiki.com/ a "morph.io":http://morph.io/ 
 * "https://classic.scraperwiki.com/scrapers/congreso_listado_de_diputados/":https://classic.scraperwiki.com/scrapers/congreso_listado_de_diputados/
 * "https://classic.scraperwiki.com/scrapers/congreso_datos_diputado/":https://classic.scraperwiki.com/scrapers/congreso_datos_diputado/
 

@@ -15,6 +15,7 @@ os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
 
 
 USER_AGENT = 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.3) Gecko/20091020 Ubuntu/9.10 (karmic) Firefox/3.6.0'
+LEGISLATURE = '12'
 
 
 def get_content(url):
@@ -33,7 +34,7 @@ def convert_to_unicode(string):
 class CongressList(object):
 
     def __init__(self):
-        self.start_url = 'http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11'
+        self.start_url = 'http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=' + LEGISLATURE
         self.result = []
 
     def start(self):
@@ -73,7 +74,7 @@ class CongressList(object):
 class CongressData(object):
 
     def __init__(self):
-        self.start_url = 'http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=11'
+        self.start_url = 'http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados?_piref73_1333056_73_1333049_1333049.next_page=/wc/menuAbecedarioInicio&tipoBusqueda=completo&idLegislatura=' + LEGISLATURE
 
     def start(self):
         scrape = CongressList()
