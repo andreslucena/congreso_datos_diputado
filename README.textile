@@ -30,10 +30,13 @@ Basado en el trabajo de "Pablo Castellano":https://github.com/PabloCastellano pa
 
 h1. Desarrollo
 
-Para preparar el entorno de desarrollo y testing en local, con Ubuntu 14.04, recomendamos usar virtualenv y virtualenvwrapper. Una vez instalados y dentro de un entorno virtual, ejecutamos lo siguiente:
+Para preparar el entorno de desarrollo y testing en local, con Ubuntu 16.04, recomendamos usar entornos virtuales. Ejecutamos lo siguiente:
 
-bc. sudo apt-get install libxml2-dev libxslt1-dev python3-dev
+bc. sudo apt-get install libxml2-dev libxslt1-dev python3-dev  python3-venv
+python3 -m venv env3
+source bin/activate
 pip install -r requirements.txt 
+python scraper.py
 
 h1. Producción
 
